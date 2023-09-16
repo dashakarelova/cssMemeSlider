@@ -8,37 +8,35 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="carousel">
-            <div class="pictures">
-                <img src="./assets/IMG_1.JPG" alt="picture">
-                <img src="./assets/IMG_2.JPG" alt="picture">
-                <img src="./assets/IMG_3.JPG" alt="picture">
-                <img src="./assets/IMG_4.JPG" alt="picture">
-                <img src="./assets/IMG_5.JPG" alt="picture">
-            </div>
-            <div class="title">
-                <div class="text">
-                    <p>Work-life balance</p>
-                    <p>Keep calm and carry on</p>
-                    <p>Dude, where is JS?</p>
-                    <p>Relax and take it easy</p>
-                    <p>You can't just copy and paste CSS</p>
+        <div class="carousel_wrapper">
+            <div class="carousel">
+                <div class="pictures">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+    
+                    <div class="slide s1"><img class="img1" src="./assets/IMG_1.JPG" alt="picture"></div>
+                    <div class="slide"><img class="img2" src="./assets/IMG_2.JPG" alt="picture"></div>
+                    <div class="slide"><img class="img3" src="./assets/IMG_3.JPG" alt="picture"></div>
+                    <div class="slide"><img class="img4" src="./assets/IMG_4.JPG" alt="picture"></div>
+                    <div class="slide"><img class="img5" src="./assets/IMG_5.JPG" alt="picture"></div>
                 </div>
-                <div class="buttons">
-                    <div class="button">
-                        <span></span>
+                <div class="title">
+                    <div class="text">
+                        <p class="text1">Work-life balance</p>
+                        <p class="text2">Keep calm and carry on</p>
+                        <p class="text3">Dude, where is JS?</p>
+                        <p class="text4">Relax and take it easy</p>
+                        <p class="text5">You can't just copy and paste CSS</p>
                     </div>
-                    <div class="button">
-                        <span></span>
-                    </div>
-                    <div class="button">
-                        <span></span>
-                    </div>
-                    <div class="button">
-                        <span></span>
-                    </div>
-                    <div class="button">
-                        <span></span>
+                    <div class="buttons">
+                        <label for="r1" class="button"><p></p></label>
+                        <label for="r2" class="button"><p></p></label>
+                        <label for="r3" class="button"><p></p></label>
+                        <label for="r4" class="button"><p></p></label>
+                        <label for="r5" class="button"><p></p></label>
                     </div>
                 </div>
             </div>
