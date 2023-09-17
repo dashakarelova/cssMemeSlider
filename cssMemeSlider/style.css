@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 1rem;
+    color: #717171;
+    font-family: 'Inter', Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 846px) {
+    body {
+        font-size: 0.9rem;
+    }
+}
+
+.wrapper {
+    max-width: 70vw;
+    margin: 0 auto;
+}
+
+.carousel_wrapper {
+    padding: 5%;
+    margin-top: 2rem;
+    box-shadow: 0rem 0.3rem 0.7rem 0.1rem #ccc;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.pictures {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+input[name="r"] {
+    display: none;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0%;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -60%;
+}
+
+#r5:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+.slide {
+    width: 20%;
+    transition: all .7s ease;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.text {
+    height: 2.5rem;
+    padding-top: 0.3rem;
+    overflow: hidden;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.buttons {
+    display: flex;
+}
+
+.button {
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.button1,
+.button2,
+.button3,
+.button4,
+.button5 {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #0C0C0E;
+    cursor: pointer;
+    border: 0.2rem solid #0C0C0E;
+}
+
+@media (max-width: 846px) {
+    .button1,
+    .button2,
+    .button3,
+    .button4,
+    .button5 {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
+
+.button:hover p {
+    transition: 0.3s;
+    background-color: #FFD954;
+    border: 0.2rem solid #FFD954;
+}
+
+.pictures:has(#r1:checked) ~ .title .buttons .button1,
+.pictures:has(#r2:checked) ~ .title .buttons .button2,
+.pictures:has(#r3:checked) ~ .title .buttons .button3,
+.pictures:has(#r4:checked) ~ .title .buttons .button4,
+.pictures:has(#r5:checked) ~ .title .buttons .button5 {
+    border: 0.2rem solid #000;
+    background-color: #FFF;
+    transition: 0.3s;
+}
+
+.pictures:has(#r1:checked) ~ .title .buttons .b1:hover p,
+.pictures:has(#r2:checked) ~ .title .buttons .b2:hover p,
+.pictures:has(#r3:checked) ~ .title .buttons .b3:hover p,
+.pictures:has(#r4:checked) ~ .title .buttons .b4:hover p,
+.pictures:has(#r5:checked) ~ .title .buttons .b5:hover p {
+    transition: 0.3s;
+    background-color: #FFF;
+    border: 0.2rem solid #FFD954;
+}
+
+.pictures:has(#r1:checked) ~ .title .text .text1,
+.pictures:has(#r2:checked) ~ .title .text .text2,
+.pictures:has(#r3:checked) ~ .title .text .text3,
+.pictures:has(#r4:checked) ~ .title .text .text4,
+.pictures:has(#r5:checked) ~ .title .text .text5 {
+    opacity: 1;
+}
+
+.pictures:has(#r1:checked) ~ .title .text .text1 {
+    margin-top: 0.2rem;
+}
+
+.pictures:has(#r2:checked) ~ .title .text .text1 {
+    margin-top: -1.0rem;
+}
+
+.pictures:has(#r3:checked) ~ .title .text .text1 {
+    margin-top: -2.2rem;
+}
+
+.pictures:has(#r4:checked) ~ .title .text .text1 {
+    margin-top: -3.4rem;
+}
+
+.pictures:has(#r5:checked) ~ .title .text .text1 {
+    margin-top: -4.6rem;
+}
+
+@media (max-width: 846px) {
+    .pictures:has(#r1:checked) ~ .title .text .text1 {
+        margin-top: 0.1rem;
+    }
+
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.1rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -3.2rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -4.3rem;
+    }
+}
+
+@media (max-width: 748px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -4.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -3.3rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -6.5rem;
+    }
+}
+
+@media (max-width: 581px) {
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -7.6rem;
+    }
+}
+
+@media (max-width: 555px) {
+    .carousel {
+        gap: 1rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .title {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -3.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -4.3rem;
+    }
+}
+
+@media (max-width: 421px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -4.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
+}
