@@ -19,10 +19,8 @@ img {
 }
 
 html,
-body{
+body {
     height: 100%;
-    /* line-height: 1.25rem; */
-    /* font-size: 1.25rem; */
     font-size: 1rem;
     color: #717171;
     font-family: 'Inter', Verdana, sans-serif;
@@ -46,8 +44,10 @@ body{
 }
 
 .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     overflow: hidden;
-    margin-top: 1rem;
 }
 
 .pictures {
@@ -91,12 +91,13 @@ input[name="r"] {
 }
 
 .title {
-    padding: 2rem 0 0;
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
 }
 
 .text {
+    height: 2.5rem;
     padding-top: 0.3rem;
     overflow: hidden;
 }
@@ -114,27 +115,48 @@ input[name="r"] {
     display: flex;
 }
 
-.button  {
+.button {
     padding: 0.5rem;
     cursor: pointer;
 }
 
-.button p {
+.button1,
+.button2,
+.button3,
+.button4,
+.button5 {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
     background-color: #0C0C0E;
     cursor: pointer;
+    border: 0.2rem solid #0C0C0E;
 }
 
 .button:hover p {
+    transition: 0.3s;
     background-color: #FFD954;
-    transition: 0.5s;
+    border: 0.2rem solid #FFD954;
 }
 
-.button:checked p {
-    background-color: #FFD954;
-    transition: 0.5s;
+.pictures:has(#r1:checked) ~ .title .buttons .button1,
+.pictures:has(#r2:checked) ~ .title .buttons .button2,
+.pictures:has(#r3:checked) ~ .title .buttons .button3,
+.pictures:has(#r4:checked) ~ .title .buttons .button4,
+.pictures:has(#r5:checked) ~ .title .buttons .button5 {
+    border: 0.2rem solid #000;
+    background-color: #FFF;
+    transition: 0.3s;
+}
+
+.pictures:has(#r1:checked) ~ .title .buttons .b1:hover p,
+.pictures:has(#r2:checked) ~ .title .buttons .b2:hover p,
+.pictures:has(#r3:checked) ~ .title .buttons .b3:hover p,
+.pictures:has(#r4:checked) ~ .title .buttons .b4:hover p,
+.pictures:has(#r5:checked) ~ .title .buttons .b5:hover p {
+    transition: 0.3s;
+    background-color: #FFF;
+    border: 0.2rem solid #FFD954;
 }
 
 .pictures:has(#r1:checked) ~ .title .text .text1,
@@ -143,4 +165,24 @@ input[name="r"] {
 .pictures:has(#r4:checked) ~ .title .text .text4,
 .pictures:has(#r5:checked) ~ .title .text .text5 {
     opacity: 1;
+}
+
+.pictures:has(#r1:checked) ~ .title .text .text1 {
+    margin-top: 0.2rem;
+}
+
+.pictures:has(#r2:checked) ~ .title .text .text1 {
+    margin-top: -1.0rem;
+}
+
+.pictures:has(#r3:checked) ~ .title .text .text1 {
+    margin-top: -2.2rem;
+}
+
+.pictures:has(#r4:checked) ~ .title .text .text1 {
+    margin-top: -3.4rem;
+}
+
+.pictures:has(#r5:checked) ~ .title .text .text1 {
+    margin-top: -4.6rem;
 }
