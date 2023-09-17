@@ -32,6 +32,12 @@ body {
     -webkit-text-size-adjust: 100%;
 }
 
+@media (max-width: 846px) {
+    body {
+        font-size: 0.9rem;
+    }
+}
+
 .wrapper {
     max-width: 70vw;
     margin: 0 auto;
@@ -133,6 +139,17 @@ input[name="r"] {
     border: 0.2rem solid #0C0C0E;
 }
 
+@media (max-width: 846px) {
+    .button1,
+    .button2,
+    .button3,
+    .button4,
+    .button5 {
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+}
+
 .button:hover p {
     transition: 0.3s;
     background-color: #FFD954;
@@ -185,4 +202,97 @@ input[name="r"] {
 
 .pictures:has(#r5:checked) ~ .title .text .text1 {
     margin-top: -4.6rem;
+}
+
+@media (max-width: 846px) {
+    .pictures:has(#r1:checked) ~ .title .text .text1 {
+        margin-top: 0.1rem;
+    }
+
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.1rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -3.2rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -4.3rem;
+    }
+}
+
+@media (max-width: 748px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -4.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
+}
+
+@media (max-width: 599px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -3.3rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -6.5rem;
+    }
+}
+
+@media (max-width: 581px) {
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -7.6rem;
+    }
+}
+
+@media (max-width: 555px) {
+    .carousel {
+        gap: 1rem;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .title {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -3.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -4.3rem;
+    }
+}
+
+@media (max-width: 421px) {
+    .pictures:has(#r3:checked) ~ .title .text .text1 {
+        margin-top: -2.2rem;
+    }
+
+    .pictures:has(#r4:checked) ~ .title .text .text1 {
+        margin-top: -4.4rem;
+    }
+
+    .pictures:has(#r5:checked) ~ .title .text .text1 {
+        margin-top: -5.4rem;
+    }
 }
